@@ -7,6 +7,8 @@ are first detected in static video frames by **Endres's region detector** [2], t
 of motion. The current approach adds a new motion cue, which makes a small improvement on the existing motion
 cue in its ability to predict the overlap of a region with the ground truth.
 
+<img src="images/opticalFlowMagnitude.png" />
+
 Additionally, linear and nonlinear regression analysis was performed to attempt to learn better ways to combine the
 static and motion cues.
 
