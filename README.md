@@ -12,8 +12,8 @@ static and motion cues.
 
 The program is written in MatLab.
 
-    [1] Y. J. Lee, J. Kim, and K. Grauman, Key-Segments for Video Object Segmentation, in ICCV 2011.
-    [2] I. Endres and D. Hoiem, Category Independent Object Proposals, in ECCV 2010.
+[1] Y. J. Lee, J. Kim, and K. Grauman, Key-Segments for Video Object Segmentation, in ICCV 2011.  
+[2] I. Endres and D. Hoiem, Category Independent Object Proposals, in ECCV 2010.  
 
 
 ## Pipeline
@@ -43,26 +43,25 @@ getMotionCue1.m | code for the first motion cue
 getMotionCue2.m | code for the new motion cue
 getRegressionLinear.m | called by compareScores
 getRegressionNonlinear.m | called by compareScores - calls libsvm
----- | ----
+|
 showMotionCue.m | generates figures showing how the motion cues work
 findExamples.m | find good examples to compare the motion cues
 showRegion.m | show a single region by calling showMotionCue
 showStaticScores.m | shows a plot of endres static scores
----- | ----
+|
 getImageType.m | determines the type of image in a folder, eg jpg, png
 selectRows.m | selects rows from a matrix
 motionRegion.m | work started on extracting regions based on motion
----- | ----
+|
 scoresAll.mat | data generated for segtrack videos, can be run through compareScores
 
 
 ## Libsvm
 
-Libsvm should be downloaded and put into the util subfolder.
-Version 3.1 of the Matlab interface is only compiled for
-32-bit linux, so the nonlinear regression won't work on
-64-bit machines, unless you compile it for it.
+Libsvm should be downloaded and put into the `util` subfolder.
 
+Version 3.1 of the Matlab interface is only compiled for 32-bit Linux, so the
+nonlinear regression won't work on 64-bit machines, unless you compile it for it.
 
 
 ## License
