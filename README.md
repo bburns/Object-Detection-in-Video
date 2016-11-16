@@ -18,6 +18,11 @@ The program is written in MatLab.
 [2] I. Endres and D. Hoiem, Category Independent Object Proposals, in ECCV 2010.  
 
 
+## Report
+
+The final report is available [here](https://drive.google.com/open?id=0B-CHxEeXdpp2SEFIbm53R1NFZ3M).
+
+
 ## Pipeline
 
 The main pipeline includes:
