@@ -1,11 +1,11 @@
 
+% showStaticScores.m
 % make a plot showing static scores from endres code
+
 
 video = 3;
 frame = 1;
 region = 1;
-
-
 
 % data sources
 datadir         = '/projects/vision/4/bburns/datasets/segtrack/';
@@ -37,7 +37,6 @@ gt = im2bw(gt, 0.5); % convert to binary mask
 % get region data
 regionfile = [regiondir imname1 '.mat'];
 load(regionfile, 'proposals', 'superpixels', 'unary')
-
 
 plot(unary);
 title('static scores from endres code');

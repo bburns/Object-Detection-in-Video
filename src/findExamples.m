@@ -1,7 +1,6 @@
 
-
+% findExamples.m
 % look for examples where m1 and m2 differ the most
-
 
 
 load('scoresAll.mat');
@@ -15,21 +14,16 @@ colStatic = 5;
 colMotion1 = 6;
 colMotion2 = 7;
 
-
-
 colScore = 8;
 m(:,colScore) = abs(m(:,colMotion2) - m(:,colMotion1));
 
 m2 = sortrows(m,-colScore);
 m2 = m;
 
-
 display('video frame region overlap static motion1 motion2 score');
 
 m2(1:20,:)
 %icount = 0;
-
-
 
 %for vid=1:6
 for vid=3:3
@@ -51,6 +45,4 @@ for vid=3:3
     if icount>=100, break; end
   end
 end
-
-
 

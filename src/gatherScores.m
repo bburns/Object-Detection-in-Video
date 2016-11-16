@@ -1,4 +1,5 @@
 
+% gatherScores.m
 % Gather all the calculated static and motion and overlap scores
 % for all the regions of all the videos,
 % and put them into a single matrix. 
@@ -11,7 +12,6 @@
 
 % data files
 datadir = '/projects/vision/4/bburns/datasets/segtrack/';
-
 
 m = [];
 
@@ -38,5 +38,4 @@ end % vid
 
 % save matrix to file
 save('scoresAll.mat', 'm');
-
 

@@ -1,5 +1,5 @@
 
-
+% showRegion.m
 % show example region with motion cue sample points
 
 
@@ -16,7 +16,6 @@
 %video=4;frame=2;region=1;
 %video=4;frame=21;region=13;
 
-
 %video=1;frame=16;region=129;showvy=true; % o=.56, m1=6, m2=10 [bird, good by both]
 %video=4;frame=41;region=37; % example showing problem with frame border, worse for m2
 %video=1;frame=6;region=120; % m1 beats m2
@@ -25,10 +24,8 @@
 %video=1;frame=16;region=122;showvy=true; % m1 sees mpeg artifact as motion, m2 doesn't reach it
 %video=1;frame=26;region=31;showvx=true; % another mpeg artifact? m1 very sensitive
 
-
 %video=2;frame=21;region=27;showdir=true; % m2>m1. but m1 correctly picking up motion difference
 %video=2;frame=21;region=19;%showdir=true; % m2>m1. but m1 correctly picking up motion difference
-
 
 %showMotionCue(video, frame, region, bgopt);
 
@@ -39,6 +36,5 @@
 %showMotionCue(2,21,27,4);
 showMotionCue(4,31,45,1);
 %showMotionCue(3,16,9,2);
-
 
 

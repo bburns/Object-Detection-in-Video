@@ -1,8 +1,10 @@
 
+% getMotionCue1.m
 % get motion1 cue - difference in histograms of optical flow
 % code extracted from getAppMotionRegionScores.m
 % called from getAppMotionRegionScores.m
 % author: yjlee
+
 
 function [motion1Score, xmin, xmax, ymin, ymax] = getMotionCue1(regionmap, vx, vy)
 
@@ -12,7 +14,6 @@ function [motion1Score, xmin, xmax, ymin, ymax] = getMotionCue1(regionmap, vx, v
   % parameters
   bdryPix = 30;
   flowBinEdges = [-15:0.5:15];
-
 
   [nr, nc, z] = size(regionmap);
 

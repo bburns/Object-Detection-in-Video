@@ -1,8 +1,10 @@
 
+% getMotionCue2.m
 % contour motion detector
 % looks at motion differences near boundaries of region
 % called from getAppMotionRegionScores.m
 % author: bburns
+
 
 % regionmap - the binary region map
 % vx, vy - the optical flow vector map

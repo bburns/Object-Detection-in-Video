@@ -1,4 +1,5 @@
 
+% getScores.m
 % Get the static and motion scores, the overlap with the ground 
 % truth, for all videos and frames, and save them to a matrix 
 % for doing regression on.
@@ -16,7 +17,6 @@ addpath(genpath('/v/filer4b/v17q003/yjlee/code/gcmex-2.3.0/'));
 addpath(        '/v/filer4b/v17q003/yjlee/code/sliding_segments/');
 addpath(        '/v/filer4b/v37q001/yjlee/research/pwmetric/');
 
-
 % parameters
 % skip: number of video frames to skip during processing
 
@@ -26,13 +26,10 @@ skip = 5;
 %skip = 10;
 %skip = 25; % just do one frame
 
-
 % datafiles
 datadir         = '/projects/vision/4/bburns/datasets/segtrack/';
 regionbase      = '/scratch/vision/yjlee/videoSegmentation/SegTrack/data/regionProposals/endresUnary/';
 opticalflowbase = '/scratch/vision/yjlee/videoSegmentation/SegTrack/data/opticalFlow/';
-
-
 
 for vid = 1:6 
 
@@ -60,5 +57,4 @@ for vid = 1:6
   fprintf('\n');
 
 end % vid
-
 

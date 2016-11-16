@@ -1,12 +1,12 @@
 
+% compareScores.m
 % compare scores from static, motion1 and motion2 cues. 
 % takes top k scores from each, 
 % compares their overlap scores with the ground truth, 
 % produces box plots
 % author: bburns
 
-
-
+   
 % parameters
 % k: compare the top k scores
 % doNonlinear: turn nonlinear calcs on/off
@@ -27,10 +27,7 @@ doBoxplot = false;
 
 %doCorrelation = not doBoxplot;
 
-
-
 vidname = {'birdfall2','cheetah','girl','monkeydog','parachute','penguin'};
-
 
 % columns of m
 colVideo = 1;
@@ -52,14 +49,12 @@ if doNonlinear
   ndataCols = ndataCols + 1;
 end
 
-
 % load scores 
 load('scoresAll.mat'); % m: video, frame, region, overlap, static, motion1, motion2
 
 % get combinations
 m(:,colSM1) = m(:,colStatic) + m(:,colMotion1);
 m(:,colSM2) = m(:,colStatic) + m(:,colMotion2);
-
 
 coeffsAll = zeros(6,4);
 
@@ -123,7 +118,6 @@ for vid=1:6
     legend('Location','Best');
     legend show;
   end
-
 
 end
 

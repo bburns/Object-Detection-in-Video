@@ -1,4 +1,7 @@
 
+% getRegressionLinear.m
+% called by compareScores.m
+
 
 function [linear, coeffs] = getRegressionLinear(m, vid)
 
@@ -29,8 +32,6 @@ function [linear, coeffs] = getRegressionLinear(m, vid)
   x2test = m(iTest, colMotion1); 
   x3test = m(iTest, colMotion2);
 
-
-
   % the best fit is
   % Y = coeffs(1) + coeffs(2) * x1 + coeffs(3) * x2 + coeffs(4) * x3
   % so use that to predict objectness of some region
@@ -43,6 +44,5 @@ function [linear, coeffs] = getRegressionLinear(m, vid)
   X = [ones(size(x1test))  x1test  x2test x3test];
   Y = X * coeffs; % combined score
   linear = Y;
-
 
 end

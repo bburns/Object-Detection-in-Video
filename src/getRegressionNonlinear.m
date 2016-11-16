@@ -1,4 +1,7 @@
 
+% getRegressionNonlinear.m
+% calls libsvm
+
 
 function nonlinear = getRegressionNonlinear(m, vid)
 
@@ -6,7 +9,6 @@ function nonlinear = getRegressionNonlinear(m, vid)
   %addpath('../libsvm-3.1/matlab');
   %addpath('/projects/vision/4/bburns/code/libsvm-3.1/matlab');
   addpath('util/libsvm-3.1/matlab');
-
 
   % get indexes of rows with appropriate data
   iTrain = find(m(:,1)~=vid);
@@ -35,7 +37,6 @@ function nonlinear = getRegressionNonlinear(m, vid)
   x2test = m(iTest, colMotion1); 
   x3test = m(iTest, colMotion2);
 
-
   % train SVM
 
   labels = y;
@@ -60,7 +61,6 @@ function nonlinear = getRegressionNonlinear(m, vid)
 %    end
 %  end
 
-
   % train the svm
   % model = svmtrain(training_label_vector, training_instance_matrix [, 'libsvm_options']);
   %      -training_label_vector:
@@ -82,8 +82,6 @@ function nonlinear = getRegressionNonlinear(m, vid)
   cmd = '-s 3 -t 2';
   model = svmtrain(labels, instances, cmd)
 
-
-
   % test nonlinear regressor
   labels = ytest;
   instances = [x1test x2test x3test];
@@ -103,7 +101,6 @@ function nonlinear = getRegressionNonlinear(m, vid)
 end
 
 
-
 % scale data to [0,1]
 function dataScaled = scaleData(data)
 
@@ -112,3 +109,4 @@ function dataScaled = scaleData(data)
   dataScaled = (data - repmat(min(data,[],1),size(data,1),1)) * spdiags(1./ (max(data,[],1)-min(data,[],1))' , 0, size(data,2), size(data,2));
 
 end
+
